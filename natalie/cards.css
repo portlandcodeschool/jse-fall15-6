@@ -1,0 +1,7 @@
+/* any CSS you want for your card images can go here */
+
+.cardImage {
+	width: 100px;
+	padding: 10px;
+	/* more style props here */
+}
