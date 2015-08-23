@@ -225,7 +225,7 @@ var ImageCard = (function() {
   ImageCard.prototype = new Card();
   ImageCard.prototype.constructor = ImageCard;
 
-  // pulls images named from their id
+  // pulls images named from their id, makes more sense to me
   // pass in an element id as a string
   ImageCard.prototype.render = function(elementId) {
     var image = document.createElement('img');
