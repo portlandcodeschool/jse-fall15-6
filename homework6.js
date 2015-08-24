@@ -159,33 +159,8 @@ var TarotCard = (function() {
   TarotCard.prototype = new Card();
   TarotCard.prototype.constructor = TarotCard;
 
-  var proto = TarotCard.prototype;
 
-  proto.isValid = function() {
-		return ((typeof this.id)==="number")//correct type
-			&& (this.id%1 === 0)  //integer
-			&& (this.id >=0)  // non-negative
-			&& (this.id < this.constructor.numCards()); //in range for card type
-	}
-
-  proto.rank = function() {
-		return Math.floor(this.id/4)+1;
-	}
-	proto.suit = function() {
-		return (this.id%4)+1;
-	}
-	proto.color = undefined;
-	proto.name = function() {
-    var rankVal = this.rank();
-    var suitVal = this.suit();
-    return rankVal && suitVal &&
-      // Instead of referencing the private arrays specific to this class,
-      // use the class method (of the instance's constructor)
-      // so that a different array can be returned for each subclass
-        (this.constructor.rankNames()[rankVal]
-        +' of '
-        +this.constructor.suitNames()[suitVal]);
-	}
+	TarotCard.prototype.color = undefined;
 
 	// Private data:
 	var suitNames = ['','Cups','Pentacles','Swords','Wands'];
