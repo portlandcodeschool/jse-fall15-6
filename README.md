@@ -27,7 +27,11 @@ _Due Mon. Aug.24_
     and check its properties.
 -   Next, add a property _c_ to _obj1_ with a value of 2.  What will be the value of _obj2.c_?
 -   Now, add a property _d_ with the value 3 to _obj1_'s "proto" (the object which helps out when _obj1_ can't do something by itself).  Remember that there are at least four ways of referring to that proto object.
+[??] What are the four ways of referring to the prototype: 
+obj.__proto__
+obj.prototype
 -   What are the values of _obj1.d_, _obj2.d_, and _obj3.d_? Can you explain the results?
+[!!review??]Obj 1 and 2 inherit d=3 from the prototype because of the word 'new' which creates a new instance of Ctor, while obj3 'calls' Ctor, which is a pointer to the function and not creating a new instance. Basically, obj 3 runs the function but doesn't duplicate it, therefor doesn't inherit from Ctor's modified prototype because the modification obj1.__proto__.d = 3 occurs after Ctor. 
 
 
 **b)** Consider this code:
