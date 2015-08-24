@@ -51,6 +51,6 @@ B.prototype.str = 'default';
 var objB = new B();
 
 /* EXPLAIN:
- * XXX
- * objB has constructor B(), something to do with the invocation?
+    objA has it's prototype assigned to a new one `{num:0, str:'default'}`. ObjB just has a few new
+    properties assigned to it's prototype.
  */
