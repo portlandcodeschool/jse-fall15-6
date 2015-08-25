@@ -4,11 +4,15 @@ var ImageCard = (function(){
         Card.call(this, id);
         // then add subclass-specific properties
         this.container = 'cardImage';
-        this.render = function() {
+        this.render = function(container) {
             // add proper card image to DOM
             var img = document.createElement('img');
             img.src = 'images/SVG-cards-1.3/' + this.nameImage() + '.svg';
-            document.getElementById(this.container).appendChild(img);
+            if (typeof container === 'string') {
+                document.getElementById(container).appendChild(img);
+            } else {
+                container.appendChild(img);
+            }
         }
     }
     // subclass
