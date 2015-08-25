@@ -4,7 +4,7 @@ var ImageCard = (function(){
         Card.call(this, id);
         // then add subclass-specific properties
         this.container = 'cardImage';
-        this.render = function(container) {
+        this.render = function() {
             // add proper card image to DOM
             var img = document.createElement('img');
             img.src = 'images/SVG-cards-1.3/' + this.nameImage() + '.svg';
