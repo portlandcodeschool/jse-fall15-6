@@ -5,10 +5,10 @@ var ImageCard = (function(){
         // then add subclass-specific properties
         this.container = 'cardImage';
         this.render = function(container) {
-            // XXX this works, but not exactly what is needed
             // add proper card image to DOM
-            var html = '<img class="cardImage" src="images/SVG-cards-1.3/' + this.nameImage() + '.svg">';
-            container.innerHTML += html;
+            var img = document.createElement('img');
+            img.src = 'images/SVG-cards-1.3/' + this.nameImage() + '.svg';
+            document.getElementById(this.container).appendChild(img);
         }
     }
     // subclass
