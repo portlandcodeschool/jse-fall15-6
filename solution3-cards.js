@@ -31,6 +31,7 @@ var Card = (function(){
         	// Instead of referencing the private arrays specific to this class,
         	// use the class method (of the instance's constructor)
         	// so that a different array can be returned for each subclass
+
             (this.constructor.rankNames()[rankVal]
             +' of '
             +this.constructor.suitNames()[suitVal]);
